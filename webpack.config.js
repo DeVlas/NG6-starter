@@ -4,13 +4,16 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
+  watch: true,
   entry: {},
   module: {
     loaders: [
        { test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel' },
        { test: /\.html$/, loader: 'raw' },
        { test: /\.(scss|sass)$/, loader: 'style!css!sass' },
-       { test: /\.css$/, loader: 'style!css' }
+       { test: /\.css$/, loader: 'style!css' },
+       { test: /\.png|\.svg|\.jpg/, loader: 'url-loader'},
+       { test:  /\.(woff2?|eot|ttf|otf|svg)$/, loader: 'file-loader?name=[name].[ext]&publicPath=/&outputPath=fonts/'}
     ]
   },
   plugins: [

@@ -1,9 +1,22 @@
-<navbar></navbar>
-<header>
-  <hero></hero>
-</header>
-<main>
-  <div>
-    <h1>Found in {{ $ctrl.name }}.html</h1>
-  </div>
+<main class="home" layout="row" layout-align="center center">
+    <div class="md-whiteframe-1dp container" layout="column" layout-align="space-between center">
+        <md-list ng-cloak flex-grow>
+            <md-list-item >
+                <i class="material-icons icon-color-plus" ng-click="vm.openModalWindow()">add_circle</i>
+                <p class="text">Entities connected<span ng-if="vm.isSetCheckedItems()" class="count">({{ vm.getCheckedItemsCount() }})</span></p>
+                <div ng-click="vm.toggle()" ng-if="vm.isSetCheckedItems()">
+                    <i class="material-icons" ng-if="vm.toggled">keyboard_arrow_up</i>
+                    <i class="material-icons" ng-if="!vm.toggled">keyboard_arrow_down</i>
+                </div>
+            </md-list-item>
+            <div ng-if="vm.isToggled()">
+                <md-list-item class="md-2-line" ng-repeat="item in vm.items | filter:{checked:true}">
+                    <div class="md-list-item-text md-offset-entities">
+                        <h3>{{ item.title}}</h3>
+                        <p>{{ item.type}}</p>
+                    </div>
+                </md-list-item>
+            </div>
+        </md-list>
+    </div>
 </main>

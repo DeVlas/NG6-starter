@@ -1,0 +1,25 @@
+<div class="entities-container md-whiteframe-1dp">
+    <div class="search-contaiter" layout="row" layout-align="space-around center">
+        <i class="material-icons input-search">search</i>
+        <input type="text"
+               ng-model="vm.searchText"
+               ng-change="vm.toggled = true"
+               flex="80"
+               placeholder="Search entity"
+        >
+        <i class="material-icons input-list" ng-click="vm.toggle()">filter_list</i>
+    </div>
+    <md-divider></md-divider>
+    <div class="items-container" ng-if="vm.isToggled()">
+        <md-list flex>
+            <md-list-item class="md-2-line" ng-repeat="item in vm.items | filter:vm.searchText">
+                <md-divider></md-divider>
+                <md-checkbox ng-model="item.checked"></md-checkbox>
+                <div class="md-list-item-text">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.type}}</p>
+                </div>
+            </md-list-item>
+        </md-list>
+    </div>
+</div>

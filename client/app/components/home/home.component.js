@@ -3,9 +3,10 @@ import controller from './home.controller';
 import './home.scss';
 
 let homeComponent = {
-  bindings: {},
-  template,
-  controller
+    bindings: {},
+    template,
+    controller,
+    controllerAs: 'vm'
 };
 
 export default homeComponent;
