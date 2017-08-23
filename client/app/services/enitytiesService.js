@@ -10,12 +10,12 @@ function EntitiesService(){
         {
             title: 'Car Wash',
             type: 'BPM',
-            checked: true
+            checked: false
         },
         {
             title: 'Maintenance',
             type: 'Project',
-            checked: true
+            checked: false
         },
         {
             title: 'Customer payment',
@@ -25,11 +25,6 @@ function EntitiesService(){
         {
             title: 'Technical issues',
             type: 'Project',
-            checked: false
-        },
-        {
-            title: 'Something',
-            type: 'BPM',
             checked: false
         }
     ];

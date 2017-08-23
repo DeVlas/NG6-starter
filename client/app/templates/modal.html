@@ -1,20 +1,20 @@
 <div class="modal-window" layout="column" layout-align="space-around center" flex>
-    <div layout="row" layout-align="space-between start" class="modal-header">
-        <div layout layout-align="center center" class="header-text">2016 KPI.$15M Renewal Revenue (Strategic Goal)</div>
-        <div layout layout-align="center center" class="close-modal-window"><i class="material-icons icon-x2" ng-click="vm.close()">clear</i></div>
-    </div>
-
-    <div class="modal-body" layout="column">
-        <div layout="row" layout-align="space-around none">
-            <div flex layout layout-align="center center">
-                <h2 class="header">Add entities</h2>
-            </div>
+    <div layout="row" layout-align="space-around center" flex="10" class="modal-header">
+        <div flex="10"></div>
+        <div flex layout="row" layout-align="center center" class="header-text">
+            2016 KPI.$15M Renewal Revenue (Strategic Goal)
         </div>
-        <div layout="row" layout-sm="column" layout-align="center center" layout-wrap>
-            <entity-list items="vm.items" class="entities-container"></entity-list>
+        <div flex="10" layout="row" layout-align="center center">
+            <i class="material-icons icon-x2" ng-click="vm.close()">clear</i>
         </div>
     </div>
-    <div layout="row" layout-sm="column" layout-align="center center" class="body-footer">
+    <div layout="row" flex="15" layout-align="center center">
+        <h2 class="header">Add entities</h2>
+    </div>
+    <div class="modal-body" flex layout="row" layout-align="center start">
+        <entity-list items="vm.items" class="entities-container"></entity-list>
+    </div>
+    <div layout="row" flex="25" layout-sm="column" layout-align="center center" class="body-footer">
         <md-button class="md-raised md-success btn-primary" ng-click="vm.close()">CONNECT</md-button>
     </div>
 </div>

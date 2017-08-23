@@ -24,10 +24,8 @@
   }
   .input-list {
     padding-right: 12px;
-  }
-  md-checkbox.md-checked {
-    .md-icon {
-      background-color: #303f9f;
+    &:focus {
+      outline: 0;
     }
   }
 }

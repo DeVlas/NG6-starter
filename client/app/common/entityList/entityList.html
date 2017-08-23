@@ -14,7 +14,7 @@
         <md-list flex>
             <md-list-item class="md-2-line" ng-repeat="item in vm.items | filter:vm.searchText">
                 <md-divider></md-divider>
-                <md-checkbox ng-model="item.checked"></md-checkbox>
+                <md-checkbox md-no-ink ng-model="item.checked" class="md-primary"></md-checkbox>
                 <div class="md-list-item-text">
                     <h3>{{ item.title }}</h3>
                     <p>{{ item.type}}</p>

@@ -3,10 +3,14 @@
         <md-list ng-cloak flex-grow>
             <md-list-item >
                 <i class="material-icons icon-color-plus" ng-click="vm.openModalWindow()">add_circle</i>
-                <p class="text">Entities connected<span ng-if="vm.isSetCheckedItems()" class="count">({{ vm.getCheckedItemsCount() }})</span></p>
+                <p class="text">
+                    <span ng-if="!vm.isSetCheckedItems()" class="text-color">Connected entity</span>
+                    <span ng-if="vm.isSetCheckedItems()">Entities connected</span>
+                    <span ng-if="vm.isSetCheckedItems()" class="count">({{ vm.getCheckedItemsCount() }})</span>
+                </p>
                 <div ng-click="vm.toggle()" ng-if="vm.isSetCheckedItems()">
-                    <i class="material-icons" ng-if="vm.toggled">keyboard_arrow_up</i>
-                    <i class="material-icons" ng-if="!vm.toggled">keyboard_arrow_down</i>
+                    <i class="material-icons icon-color" ng-if="vm.toggled">keyboard_arrow_up</i>
+                    <i class="material-icons icon-color" ng-if="!vm.toggled">keyboard_arrow_down</i>
                 </div>
             </md-list-item>
             <div ng-if="vm.isToggled()">
